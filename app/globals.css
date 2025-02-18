@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+} */
+/* Add this CSS to your global stylesheet or a CSS module */
+/* Define the initial state */
+/* Define the initial state */
+.pop-slide {
+  opacity: 0;
+  transform: translateY(50px); /* Initial position below */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Jab element viewport me aaye aur scroll down ho raha ho, to show class lagaye */
+.pop-slide.show {
+  opacity: 1;
+  transform: translateY(0); /* Element ko apne position pe laao */
+}
+
+body{
+  overflow-x: hidden;
+}
