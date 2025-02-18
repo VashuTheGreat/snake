@@ -347,16 +347,32 @@ export const CartProvider = ({ children }) => {
     setSubTotal(Object.values(myCart).reduce((acc, item) => acc + item.price * item.qty, 0));
   };
 
+  // const addToCart = (itemCode, qty, price, name, size, variant) => {
+  //   let newCart = { ...cart };
+  //   if (newCart[itemCode]) {
+  //     newCart[itemCode].qty += qty;
+  //   } else {
+  //     newCart[itemCode] = { qty, price, name, size, variant };
+  //   }
+  //   setCart(newCart);
+  //   saveCart(newCart);
+  // };
   const addToCart = (itemCode, qty, price, name, size, variant) => {
     let newCart = { ...cart };
-    if (newCart[itemCode]) {
-      newCart[itemCode].qty += qty;
+    
+    // Create a unique key for each item based on name, size, and variant
+    const uniqueKey = `${itemCode}-${name}-${size}-${variant}`;
+    
+    if (newCart[uniqueKey]) {
+        newCart[uniqueKey].qty += qty;
     } else {
-      newCart[itemCode] = { qty, price, name, size, variant };
+        newCart[uniqueKey] = { qty, price, name, size, variant };
     }
+
     setCart(newCart);
     saveCart(newCart);
-  };
+};
+
 
   const removeFromCart = (itemCode, qty) => {
     let newCart = { ...cart };

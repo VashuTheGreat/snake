@@ -224,9 +224,9 @@ const Navbar = () => {
           <img className="w-52" src="/logoweb.jpeg" alt="Logo" />
         </Link>
 
-        <li className="w-3/4 flex">
+        <li className="w-3/4 flex max-sm:hidden">
           <input
-            className="border-black border-2 w-3/4 h-10 p-2"
+            className="border-black border-2 w-3/4 h-10 p-2 "
             placeholder="Search item"
             type="text"
           />
@@ -239,12 +239,13 @@ const Navbar = () => {
           <li onClick={toggleCart}>
             <i className="fa-solid fa-cart-shopping fa-xl"></i>
           </li>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
+
+          <a className="max-sm:hidden" href='/'><li>Home</li></a>
+          <a className="max-sm:hidden" href='/about'><li>About</li></a>
+          <a className="max-sm:hidden" href='/contact'><li>Contact</li></a>
 
           {session ? (
-            <li className="relative">
+            <li className="relative max-sm:mr-10">
               <div
                 className="w-10 h-10 flex items-center justify-center rounded-full cursor-pointer"
                 style={{ backgroundColor: avatarBackground }}
@@ -277,17 +278,41 @@ const Navbar = () => {
                     >
                       Logout
                     </li>
+                    <li
+                      className="p-2 cursor-pointer"
+                      
+                    >
+                      <a className="max-sm:block hidden" href='/'><li>Home</li></a>
+         
+                    </li>
+                    <li
+                      className="p-2 cursor-pointer"
+                      
+                    >
+                       
+                       <a className="max-sm:block hidden" href='/about'><li>About</li></a>
+          
+         
+                    </li>
+                    <li
+                      className="p-2 cursor-pointer"
+                      
+                    >
+                       
+                       <a className="max-sm:block hidden" href='/contact'><li>Contact</li></a>
+         
+                    </li>
                   </ul>
                 </div>
               )}
             </li>
           ) : (
-            <li>
+            <li >
               <button
                 onClick={() =>
                   signIn("google").catch((err) => console.error(err))
                 }
-                className="bg-blue-500 text-white px-4 py-2 rounded"
+                className="bg-blue-500 text-white px-4 py-2 rounded max-sm:mr-10"
               >
                 Login
               </button>
@@ -315,6 +340,7 @@ const Navbar = () => {
   ) : (
     Object.keys(cart).map((key) => (
       <li key={key} className="flex justify-between items-center border-b py-2">
+        {/* <span>{cart[key].name} ({cart[key].size}, {cart[key].variant})</span> */}
         <span>{cart[key].name} ({cart[key].size}, {cart[key].variant})</span>
         <span>Qty: {cart[key].qty}</span>
         <span>₹{cart[key].price * cart[key].qty}</span>
@@ -331,10 +357,12 @@ const Navbar = () => {
         </ol>
         <div className="Checkout flex justify-center items-center gap-2">
         
-          <button className="bg-stone-500 text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-red-400 transition duration-300 flex gap-5 items-center justify-center">
+          <a href='/checkout' target="_blank">
+          <button  className="bg-stone-500 text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-red-400 transition duration-300 flex gap-5 items-center justify-center">
           <i className="fa-solid fa-bag-shopping fa-2xl" style={{color: "#B176"}}></i>
   Checkout
 </button>
+          </a>
           <button onClick={clearCart} className="bg-stone-500 text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-red-400 transition duration-300 flex gap-5 items-center justify-center">
   ClearCart
 </button>

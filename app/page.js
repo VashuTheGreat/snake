@@ -85,21 +85,21 @@ export default function App() {
       <div className="text-center">
   <h2 className="pop-slide font-bold text-2xl mb-6  align-middle p-8">COLLECTIONS</h2>
   <div className="Collection flex flex-wrap justify-center gap-10 px-6 w-11/12">
-    <Link href={`/products/${'caps'}`}><div
+    <Link href={`/caps`}><div
       className="card pop-slide bg-cover bg-center bg-no-repeat h-80 w-80 p-6 flex items-end justify-center text-white rounded-lg shadow-lg"
       style={{ backgroundImage: "url('./caps.webp')" }} >
       <div className="bg-black bg-opacity-50 px-4 py-2 rounded-lg text-center font-bold text-xl w-full">
         Caps
       </div>
     </div></Link>
-    <Link href={`/tshirts`}><div
+    <Link href={`/oversizedtshirts`}><div
       className="card pop-slide bg-cover bg-center bg-no-repeat h-80 w-80 p-6 flex items-end justify-center text-white rounded-lg shadow-lg"
       style={{ backgroundImage: "url('./oversizedtshirt.webp')" }} >
       <div className="bg-black bg-opacity-50 px-4 py-2 rounded-lg text-center font-bold text-xl w-full">
         T-shirts
       </div>
     </div></Link>
-    <Link href={`/tshirts`}><div
+    <Link href={`/polotshirts`}><div
       className="card pop-slide bg-cover bg-center bg-no-repeat h-80 w-80 p-6 flex items-end justify-center text-white rounded-lg shadow-lg"
       style={{ backgroundImage: "url('./polotshirts.webp')" }} >
       <div className="bg-black bg-opacity-50 px-4 py-2 rounded-lg text-center font-bold text-xl w-full">
@@ -138,14 +138,14 @@ export default function App() {
       <div className="text-center">
   <h2 className="pop-slide font-bold text-2xl mb-6  align-middle p-8">THEMES</h2>
   <div className="Collection flex flex-wrap justify-center gap-10 px-6 w-11/12">
-   <Link href={`/products/${'Life Style'}`}> <div
+   <Link href={`/lifestyle`}> <div
       className="card pop-slide bg-cover bg-center bg-no-repeat h-80 w-80 p-6 flex items-end justify-center text-white rounded-lg shadow-lg"
       style={{ backgroundImage: "url('./lifestyle.webp')" }}  >
       <div className="bg-black bg-opacity-50 px-4 py-2 rounded-lg text-center font-bold text-xl w-full">
         Lifestyle
       </div>
     </div></Link>
-    <Link  href={`/products/${'Programming'}`}><div
+    <Link  href={`/programming'}`}><div
       className="card pop-slide bg-cover bg-center bg-no-repeat h-80 w-80 p-6 flex items-end justify-center text-white rounded-lg shadow-lg"
       style={{ backgroundImage: "url('./programming.webp')" }}
     >
@@ -153,7 +153,7 @@ export default function App() {
         Programming
       </div>
     </div></Link>
-    <Link  href={`/tshirts`}><div
+    <Link  href={`/fitness`}><div
       className="card pop-slide bg-cover bg-center bg-no-repeat h-80 w-80 p-6 flex items-end justify-center text-white rounded-lg shadow-lg"
       style={{ backgroundImage: "url('./fitness.webp')" }}
     >
@@ -169,7 +169,7 @@ export default function App() {
         Mugs
       </div>
     </div></Link>
-    <Link  href={`/products/${'Mouse pads'}`}><div
+    <Link  href={`/mousepads'}`}><div
       className="card pop-slide bg-cover bg-center bg-no-repeat h-80 w-80 p-6 flex items-end justify-center text-white rounded-lg shadow-lg"
       style={{ backgroundImage: "url('./mousepad.webp')" }}
     >
@@ -177,7 +177,7 @@ export default function App() {
         Mouse Pads
       </div>
     </div></Link>
-    <Link  href={`/products/${'Gaming'}`}><div
+    <Link  href={`/gamming`}><div
       className="card pop-slide bg-cover bg-center bg-no-repeat h-80 w-80 p-6 flex items-end justify-center text-white rounded-lg shadow-lg"
       style={{ backgroundImage: "url('./gaming.webp')" }}
     >
@@ -185,7 +185,7 @@ export default function App() {
         Gaming
       </div>
     </div></Link>
-    <Link  href={`/products/${'Customized'}`}><div
+    <Link  href={`/customized`}><div
       className="card pop-slide bg-cover bg-center bg-no-repeat h-80 w-80 p-6 flex items-end justify-center text-white rounded-lg shadow-lg"
       style={{ backgroundImage: "url('./Customized.webp')" }}
     >
@@ -193,7 +193,7 @@ export default function App() {
         Customized
       </div>
    </div></Link> 
-    <Link  href={`/products/${'Combo Offers'}`}><div
+    <Link  href={`/combo`}><div
       className="card pop-slide bg-cover bg-center bg-no-repeat h-80 w-80 p-6 flex items-end justify-center text-white rounded-lg shadow-lg"
       style={{ backgroundImage: "url('./combooffers.webp')" }}
     >

@@ -415,7 +415,7 @@ const Page = () => {
                 <div className="flex flex-wrap -m-4 justify-center">
                 {products.length > 0 ? (
     products
-        .filter(product => product.category === "Caps") // Filtering by category
+        .filter(product => product.category === "Programing") // Filtering by category
         .map((product) => (
             <div key={product._id} className="lg:w-1/5 md:w-1/2 p-4 w-full shadow-lg m-2">
                 <div 
