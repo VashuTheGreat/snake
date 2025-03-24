@@ -171,5 +171,30 @@
         </div>
     </footer>
 
+
+
+      <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuToggle = document.getElementById('menuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const menuIcon = document.getElementById('menuIcon');
+      let isOpen = false;
+
+      menuToggle.addEventListener('click', function() {
+        isOpen = !isOpen;
+        
+        if (isOpen) {
+          mobileMenu.classList.remove('hidden');
+          menuIcon.classList.remove('fa-bars');
+          menuIcon.classList.add('fa-times');
+        } else {
+          mobileMenu.classList.add('hidden');
+          menuIcon.classList.remove('fa-times');
+          menuIcon.classList.add('fa-bars');
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>
